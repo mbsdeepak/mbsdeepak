@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Deepak 👋</h1>
 
 <p align="center">
-  <b>Software engineer in Bengaluru, building LLM-agent infrastructure from first principles.</b>
+  <b>Software engineer in Bengaluru — building LLM-agent infrastructure from first principles.</b>
 </p>
 
 <p align="center">
