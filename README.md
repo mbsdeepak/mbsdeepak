@@ -1,36 +1,55 @@
-# Bhargava Sai Deepak Mathukumalli
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mbsdeepak/mbsdeepak/main/assets/hero.svg" alt="Bhargava Sai Deepak Mathukumalli — building LLM-agent infrastructure from first principles" width="820" />
+</div>
 
-Backend and systems engineer in Bengaluru. I build cloud cost-intelligence and data platforms professionally, and spend my own time implementing LLM-agent infrastructure from the ground up — one small, single-purpose library per hard problem, no framework in the way.
+<br/>
 
-The bias throughout my work: **build the thing to understand it.** Minimal dependencies, code you can read end-to-end in a sitting, and behaviour you can inspect — traces, deterministic replays, real evals rather than vibes.
+<p align="center">
+  I build cloud cost-intelligence and data platforms professionally, and implement LLM-agent
+  infrastructure from the ground up on my own time — one small, single-purpose library per hard
+  problem, no framework in the way. The bias throughout: <b>build the thing to understand it</b> —
+  minimal dependencies, code you can read end-to-end, behaviour you can inspect.
+</p>
 
-## An agent platform, built in layers
+<br/>
 
-Instead of reaching for a framework, I've implemented each hard part of running an LLM agent as an independent library. They stand alone, and compose into a complete platform:
+## ⌁ &nbsp; An agent platform, built in layers
+
+Each hard part of running an LLM agent, implemented as an independent library. They stand alone — and compose into a complete platform.
+
+<div align="center">
 
 ```mermaid
 flowchart LR
-  T["request"] --> BH["bulkhead — gateway"]
-  BH --> CG["cogs — runtime"]
-  LM["loom — context"] --> CG
-  CG --> SN["sonar — tracing"]
-  CG -. evals .-> GT["gauntlet"]
+  T(["request"]) --> BH["🛡️ bulkhead<br/><i>gateway</i>"]
+  BH --> CG["⚙️ cogs<br/><i>runtime</i>"]
+  LM["🧵 loom<br/><i>context</i>"] --> CG
+  CG --> SN["📡 sonar<br/><i>tracing</i>"]
+  CG -. evals .-> GT["🎯 gauntlet"]
+  classDef n fill:#161b22,stroke:#30363d,color:#e6edf3,rx:8,ry:8;
+  class T,BH,CG,LM,SN,GT n;
 ```
+
+</div>
 
 | Project | What it solves | Notable internals |
 | :-- | :-- | :-- |
-| **[cogs](https://github.com/mbsdeepak/cogs)** | The agent runtime | Agent loop, typed tool protocol, provider abstraction, context management, permissions, and deterministic record/replay — ~1.5k lines. |
+| **[cogs](https://github.com/mbsdeepak/cogs)** | The agent runtime | Agent loop, typed tool protocol, provider abstraction, context management, permissions, and deterministic record/replay — in ~1.5k lines. |
 | **[loom](https://github.com/mbsdeepak/loom)** | Context engineering | Chunking, embeddings, vector retrieval, history compaction, and token-budgeted context assembly. |
-| **[bulkhead](https://github.com/mbsdeepak/bulkhead)** | Provider resilience | Retries, circuit breaking, rate limiting, caching, failover, and cost governance in front of any LLM provider. |
+| **[bulkhead](https://github.com/mbsdeepak/bulkhead)** | Provider resilience | Retries, circuit breaking, rate limiting, caching, failover, and cost governance in front of any provider. |
 | **[gauntlet](https://github.com/mbsdeepak/gauntlet)** | Agentic evaluation | Deterministic simulated tool environments, state/trajectory/LLM-judge grading, and pass@k with Wilson confidence intervals. |
-| **[sonar](https://github.com/mbsdeepak/sonar)** | Run observability | OpenTelemetry-style span tracer, cost/latency meters, and text/HTML trace timelines for agent runs. |
-| **[qwery](https://github.com/mbsdeepak/qwery)** | SQL over raw files | Hand-written tokenizer and recursive-descent parser feeding a Volcano-model executor over CSV/Parquet — the architecture behind DuckDB and DataFusion, in pure Python. |
+| **[sonar](https://github.com/mbsdeepak/sonar)** | Run observability | OpenTelemetry-style span tracer, cost/latency meters, and text/HTML trace timelines. |
+| **[qwery](https://github.com/mbsdeepak/qwery)** | SQL over raw files | Hand-written tokenizer + recursive-descent parser feeding a Volcano-model executor over CSV/Parquet — the design behind DuckDB, in pure Python. |
 
-## Currently
+## ⌁ &nbsp; Currently
 
-Working on cloud cost-intelligence — an LLM agent that answers cost questions over petabyte-scale usage data, and the analytics pipelines behind it running on Kubernetes.
+Cloud cost-intelligence — an LLM agent that answers cost questions over large-scale usage data, and the analytics pipelines behind it on Kubernetes.
 
-**Reach for:** Python · Go · C++ · AWS (Bedrock, Athena) · Kubernetes · Argo · SQL
+<b>Reach for:</b> &nbsp; <code>Python</code> &nbsp; <code>Go</code> &nbsp; <code>C++</code> &nbsp; <code>AWS · Bedrock · Athena</code> &nbsp; <code>Kubernetes · Argo</code> &nbsp; <code>SQL</code>
 
-**Find me:** [github.com/mbsdeepak](https://github.com/mbsdeepak)
-<!-- LinkedIn / email: send the handles and I'll wire them in here -->
+<br/>
+
+<p align="center">
+  <a href="https://github.com/mbsdeepak"><b>github.com/mbsdeepak</b></a>
+  <!-- LinkedIn / email: send the handles and I'll wire them in here -->
+</p>
