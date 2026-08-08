@@ -50,6 +50,7 @@ Cloud cost-intelligence — an LLM agent that answers cost questions over large-
 <br/>
 
 <p align="center">
-  <a href="https://github.com/mbsdeepak"><b>github.com/mbsdeepak</b></a>
-  <!-- LinkedIn / email: send the handles and I'll wire them in here -->
+  <code>$ contact</code> &nbsp;·&nbsp;
+  <a href="https://linkedin.com/in/mbsdeepak"><b>LinkedIn</b></a> &nbsp;·&nbsp;
+  <a href="mailto:mbsdeepak3@gmail.com"><b>mbsdeepak3@gmail.com</b></a>
 </p>
