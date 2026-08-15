@@ -6,8 +6,8 @@
 
 <p align="center">
   I build cloud cost-intelligence and data platforms professionally, and on my own time I implement
-  the hard parts from the ground up — LLM-agent infrastructure, data systems, and models — one small,
-  single-purpose library per problem, no framework in the way. The bias throughout:
+  the hard parts from the ground up — LLM-agent infrastructure, data and distributed systems, and
+  models — one small, single-purpose library per problem, no framework in the way. The bias throughout:
   <b>build the thing to understand it</b> — minimal dependencies, code you can read end-to-end,
   behaviour you can inspect.
 </p>
@@ -53,6 +53,14 @@ The same bias, pointed at data systems and models — each one built to see how 
 | **[athena-cost-guard](https://github.com/mbsdeepak/athena-cost-guard)** &nbsp;·&nbsp; [PyPI](https://pypi.org/project/athena-cost-guard/) | Know a query's cost before you run it | Parses SQL with sqlglot, resolves partitions through Glue, and estimates bytes-scanned from S3 — then a `@cost_guard` decorator blocks queries over budget. `pip install athena-cost-guard`. |
 | **[kalman-timeseries](https://github.com/mbsdeepak/kalman-timeseries)** | Denoising & forecasting noisy signals | Self-tuning adaptive/robust Kalman filter with an RTS smoother, NumPy-only — ~51% lower error than the plain baseline, with an accompanying paper. |
 | **[text-diffusion-fashion-mnist](https://github.com/mbsdeepak/text-diffusion-fashion-mnist)** &nbsp;·&nbsp; [🤗](https://huggingface.co/mbsdeepak/text-diffusion-fashion-mnist) | Text-to-image from scratch | A tiny Stable Diffusion — CLIP text conditioning, a U-Net denoiser, DDIM sampling, and classifier-free guidance, trained on Fashion-MNIST. Weights on Hugging Face. |
+
+## ⌁ &nbsp; Distributed systems, from scratch
+
+Consensus and storage internals, built to see how a scalable stateful system actually holds together.
+
+| Project | What it solves | Notable internals |
+| :-- | :-- | :-- |
+| **[quorum](https://github.com/mbsdeepak/quorum)** | A distributed key-value database | A from-scratch **LSM** storage engine (WAL, skiplist memtable, SSTables with bloom filters, compaction) replicated by a hand-written **Raft** — leader election, log replication with fast-backup, crash-safe persistence, and snapshot log compaction. In Go, race-tested end to end. |
 
 ## ⌁ &nbsp; Currently
 
