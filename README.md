@@ -5,10 +5,11 @@
 <br/>
 
 <p align="center">
-  I build cloud cost-intelligence and data platforms professionally, and implement LLM-agent
-  infrastructure from the ground up on my own time — one small, single-purpose library per hard
-  problem, no framework in the way. The bias throughout: <b>build the thing to understand it</b> —
-  minimal dependencies, code you can read end-to-end, behaviour you can inspect.
+  I build cloud cost-intelligence and data platforms professionally, and on my own time I implement
+  the hard parts from the ground up — LLM-agent infrastructure, data systems, and models — one small,
+  single-purpose library per problem, no framework in the way. The bias throughout:
+  <b>build the thing to understand it</b> — minimal dependencies, code you can read end-to-end,
+  behaviour you can inspect.
 </p>
 
 <br/>
