@@ -25,10 +25,11 @@ flowchart LR
   T(["request"]) --> BH["🛡️ bulkhead<br/><i>gateway</i>"]
   BH --> CG["⚙️ cogs<br/><i>runtime</i>"]
   LM["🧵 loom<br/><i>context</i>"] --> CG
+  CG --> EM["🔥 ember<br/><i>serving</i>"]
   CG --> SN["📡 sonar<br/><i>tracing</i>"]
   CG -. evals .-> GT["🎯 gauntlet"]
   classDef n fill:#161b22,stroke:#30363d,color:#e6edf3,rx:8,ry:8;
-  class T,BH,CG,LM,SN,GT n;
+  class T,BH,CG,LM,EM,SN,GT n;
 ```
 
 </div>
@@ -36,6 +37,7 @@ flowchart LR
 | Project | What it solves | Notable internals |
 | :-- | :-- | :-- |
 | **[cogs](https://github.com/mbsdeepak/cogs)** | The agent runtime | Agent loop, typed tool protocol, provider abstraction, context management, permissions, and deterministic record/replay — in ~1.5k lines. |
+| **[ember](https://github.com/mbsdeepak/ember)** | LLM inference serving | A mini-vLLM — paged KV cache + continuous batching, GPT-2 from scratch loading real weights, and an OpenAI-compatible streaming server. |
 | **[loom](https://github.com/mbsdeepak/loom)** | Context engineering | Chunking, embeddings, vector retrieval, history compaction, and token-budgeted context assembly. |
 | **[bulkhead](https://github.com/mbsdeepak/bulkhead)** | Provider resilience | Retries, circuit breaking, rate limiting, caching, failover, and cost governance in front of any provider. |
 | **[gauntlet](https://github.com/mbsdeepak/gauntlet)** | Agentic evaluation | Deterministic simulated tool environments, state/trajectory/LLM-judge grading, and pass@k with Wilson confidence intervals. |
