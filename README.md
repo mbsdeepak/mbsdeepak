@@ -53,6 +53,7 @@ The same bias, pointed at data systems and models — each one built to see how 
 | **[athena-cost-guard](https://github.com/mbsdeepak/athena-cost-guard)** &nbsp;·&nbsp; [PyPI](https://pypi.org/project/athena-cost-guard/) | Know a query's cost before you run it | Parses SQL with sqlglot, resolves partitions through Glue, and estimates bytes-scanned from S3 — then a `@cost_guard` decorator blocks queries over budget. `pip install athena-cost-guard`. |
 | **[kalman-timeseries](https://github.com/mbsdeepak/kalman-timeseries)** | Denoising & forecasting noisy signals | Self-tuning adaptive/robust Kalman filter with an RTS smoother, NumPy-only — ~51% lower error than the plain baseline, with an accompanying paper. |
 | **[text-diffusion-fashion-mnist](https://github.com/mbsdeepak/text-diffusion-fashion-mnist)** &nbsp;·&nbsp; [🤗](https://huggingface.co/mbsdeepak/text-diffusion-fashion-mnist) | Text-to-image from scratch | A tiny Stable Diffusion — CLIP text conditioning, a U-Net denoiser, DDIM sampling, and classifier-free guidance, trained on Fashion-MNIST. Weights on Hugging Face. |
+| **[scribe](https://github.com/mbsdeepak/scribe)** &nbsp;·&nbsp; [🤗](https://huggingface.co/mbsdeepak/scribe) | A small language model from scratch | A ~30M-param GPT trained from scratch on TinyStories — hand-written causal attention, GELU MLP, tied LM head. Built GPT-2-compatible on purpose, so **[ember](https://github.com/mbsdeepak/ember)** serves the very weights it trains. Weights on Hugging Face. |
 
 ## ⌁ &nbsp; Distributed systems, from scratch
 
